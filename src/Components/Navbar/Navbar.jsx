@@ -456,6 +456,11 @@ const Navbar = () => {
                       Yoga for Happiness
                     </ListItem>
                   </Link>
+                  <Link to="/whatsapp/register">
+                    <ListItem _hover={{ color: "#DE8D38" }}>
+                      Book Distribution
+                    </ListItem>
+                  </Link>
                   <Link to="">
                     <ListItem _hover={{ color: "#DE8D38" }}>
                       Art of Control

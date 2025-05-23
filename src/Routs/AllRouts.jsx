@@ -87,6 +87,9 @@ import AdminSecretEvents from '../Admin/AdminSecret/AdminSecretEvents';
 import AdminMindEvents from '../Admin/AdminMindControl/AdminMindEvents';
 import AdminTripsEvents from '../Admin/AdminTrips/AdminTripsEvents';
 import AdminFestivalsEvents from '../Admin/AdminFestivals/AdminFestivalsEvents';
+import Events from '../Admin/RegisterEvent/Events';
+import EventRegistrationForm from '../Admin/RegisterEvent/EventRegistrationForm';
+import Register from '../Pages/WhatsApp/Register';
 
 
 
@@ -126,6 +129,7 @@ const AllRouts = () => {
                   <Route path='/artOfMindControl/artFrom' element={<ArtOFMindForm/>} />
                   <Route path='/artOfMindControl/:singlePage' element={<MindControlSinglePage />} />
                   <Route path='/handleAddSection' element={<PlusForm/>} />
+                   <Route path='/whatsapp/register' element={<Register/>} />
                   <Route path='/dummy2' element={<Dummy2/>} />
                   <Route path='*' element={<NotFound/>}/>
             </Route>
@@ -177,7 +181,9 @@ const AllRouts = () => {
                   <Route path='/admin/gallery/createForm' element={<AdminGalleryForm/>}/>
                   <Route path='/admin/gallery/data' element={<AdminGalleryData/>}/>
                   <Route path='/admin/gallery/data/:id' element={<AdminGalleryDateSingle/>}/>
-                  <Route path='/admin/gallery/data/edit/:id' element={<AdminGalleryEdit/>}/>        
+                  <Route path='/admin/gallery/data/edit/:id' element={<AdminGalleryEdit/>}/>  
+                  <Route path='/admin/registerEvent' element={<Events/>} />   
+                  <Route path='/admin/registerEvent/createForm' element={<EventRegistrationForm/>} />      
                   <Route path='/skill' element={<SkillInput/>}/>
             </Route>
 

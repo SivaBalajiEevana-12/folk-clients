@@ -44,6 +44,7 @@ const AdminNavbar = () => {
     { label: 'Blogs', icon: TbLogs, path: '/admin/blogs', toggle: 'blogs' },
     { label: 'Gallery', icon: GrGallery, path: '/admin/gallery', toggle: 'gallery' },
     { label: 'Donation', icon: BiSolidDonateBlood, path: '/admin/donations', toggle: 'donation' },
+    { label: 'RegisterSession', icon: BiSolidDonateBlood, path: '/admin/registerEvent', toggle: 'donation' },
     // { label: 'Profile', icon: CgProfile, path: '/profile' },
     { label: 'Log Out', icon: IoMdLogOut, path: '/logout' }
   ];
