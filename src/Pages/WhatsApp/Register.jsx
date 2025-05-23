@@ -56,10 +56,10 @@ const Register = () => {
 
     if (!formData.whatsappNumber.trim()) {
       newErrors.whatsappNumber = "WhatsApp number is required"
-    } else if (!/^\+?[0-9]+$/.test(formData.whatsappNumber)) {
-      newErrors.whatsappNumber = "Please enter a valid number with country code"
-    } else if (formData.whatsappNumber.length < 8) {
-      newErrors.whatsappNumber = "WhatsApp number must include country code and be valid"
+    } else if (/^\+/.test(formData.whatsappNumber)) {
+      newErrors.whatsappNumber = "Please do not include country code (e.g., +91)"
+    } else if (!/^[0-9]{10}$/.test(formData.whatsappNumber)) {
+      newErrors.whatsappNumber = "Enter exactly 10 digits"
     }
 
     if (formData.age && (parseInt(formData.age) < 1 || parseInt(formData.age) > 120)) {
@@ -174,10 +174,10 @@ const Register = () => {
                 <Input
                   value={formData.whatsappNumber}
                   onChange={(e) => handleInputChange("whatsappNumber", e.target.value)}
-                  placeholder="e.g. +911234567890"
+                  placeholder="Enter 10-digit WhatsApp number"
                 />
                 <Text fontSize="sm" color="gray.500">
-                  Please include your country code (e.g., +91 for India)
+                  Don’t include +91 or any country code. Just enter 10 digits.
                 </Text>
                 <FormErrorMessage>{errors.whatsappNumber}</FormErrorMessage>
               </FormControl>
@@ -262,4 +262,4 @@ const Register = () => {
   )
 }
 
-export default Register;
+export default Register
